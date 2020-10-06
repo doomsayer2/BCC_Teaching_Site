@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Built-In Objects</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles/built-in_objects.css">
+
+    <!-- Syntax Highlighting -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</head>
+
+<body>
+    <h1>Built-In Objects</h1>
+    <pre>
+       <code class="language-js">
+        const first = 'this is a string';
+        const second = String('this is a string');
+        console.log('this is a string'.toUpperCase());
+        console.log(String('this is a string').toUpperCase());
+
+
+        console.group('Primitives vs Objects');
+            console.log(first === second);  // true
+            console.log(
+                typeof first,
+                typeof String('this is a string'),
+                typeof new String()
+            );
+        console.groupEnd();
+
+        // Strings
+        const sentence = 'this is my sentence';
+        console.group('String');
+            console.log(first.toUpperCase()); // THIS IS A STRING
+            console.log(second.toLowerCase()); // this is a string
+            console.log(sentence.startsWith('this is')); // true
+            console.log('👾'.repeat(20));
+            console.log('look at me goo       '.trim());
+        console.groupEnd();
+
+        // Numbers and Math
+        console.group('Numbers and Math');
+            console.log(1..toString()); // 1
+            console.log((1).toString());    // 1
+            console.log(Number.isInteger(5));   // true
+            console.log(Number.isInteger(5.43));    // false
+            console.log((1.562342).toFixed(2))  // 1.56
+            console.log(
+                Math.random().toFixed(2),
+                Math.ceil(1.56),
+                Math.floor(6.3)
+            )
+        console.groupEnd();
+
+        // Arrays
+        const myArr = ['max', 'nick', 'holly'];
+        console.group('Arrays');
+            console.log(myArr.length);  // 3
+            console.log(myArr.join('-'));   // max-nick-holly
+            console.log(myArr.push('ado'), myArr);  // 4  ["max", "nick", "holly", "ado"]
+            console.log(myArr.pop(), myArr);    // ado  ["max", "nick", "holly"]
+
+            myArr.forEach(function(user) {
+                console.log(user);
+            });
+
+            // Simplified with arrow functions
+            myArr.forEach((user) => console.log(user));
+        console.groupEnd();
+       </code>
+   </pre>
+    <script>
+        const first = 'this is a string';
+        const second = String('this is a string');
+        console.log('this is a string'.toUpperCase());
+        console.log(String('this is a string').toUpperCase());
+
+
+        console.group('Primitives vs Objects');
+            console.log(first === second);  // true
+            console.log(
+                typeof first,
+                typeof String('this is a string'),
+                typeof new String()
+            );
+        console.groupEnd();
+
+        // Strings
+        const sentence = 'this is my sentence';
+        console.group('String');
+            console.log(first.toUpperCase()); // THIS IS A STRING
+            console.log(second.toLowerCase()); // this is a string
+            console.log(sentence.startsWith('this is')); // true
+            console.log('👾'.repeat(20));
+            console.log('look at me goo       '.trim());
+        console.groupEnd();
+
+        // Numbers and Math
+        console.group('Numbers and Math');
+            console.log(1..toString()); // 1
+            console.log((1).toString());    // 1
+            console.log(Number.isInteger(5));   // true
+            console.log(Number.isInteger(5.43));    // false
+            console.log((1.562342).toFixed(2))  // 1.56
+            console.log(
+                Math.random().toFixed(2),
+                Math.ceil(1.56),
+                Math.floor(6.3)
+            )
+        console.groupEnd();
+
+        // Arrays
+        const myArr = ['max', 'nick', 'holly'];
+        console.group('Arrays');
+            console.log(myArr.length);  // 3
+            console.log(myArr.join('-'));   // max-nick-holly
+            console.log(myArr.push('ado'), myArr);  // 4  ["max", "nick", "holly", "ado"]
+            console.log(myArr.pop(), myArr);    // ado  ["max", "nick", "holly"]
+
+            myArr.forEach(function(user) {
+                console.log(user);
+            });
+
+            // Simplified with arrow functions
+            myArr.forEach((user) => console.log(user));
+        console.groupEnd();
+    </script>
+</body>
+
+</html>

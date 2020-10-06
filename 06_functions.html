@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles/functions.css">
+
+    <!-- Syntax Highlighting -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</head>
+
+<body>
+    <h1>Functions</h1>
+    <div class="jumbotron text-center">
+        <button type="button" class="btn btn-danger" onclick="saySomething('this is the first button')">My Button</button>
+        <button type="button" class="btn btn-danger" onclick="saySomething('this is the second button')">My Button 2</button>
+    </div>
+    <pre>
+       <code class="language-js">
+        function saySomething(message = 'goodbye', whisper = false) {
+            if (whisper) {
+                console.log(`%c${message}`, 'font-size: 5px;')
+            } else {
+                console.log(message)
+            }
+        }
+
+        saySomething('hello', true);
+        saySomething('my name is max', true);
+        saySomething();
+
+        // Function definition
+        function squared(a) {
+            return a * a;
+        }
+        console.log(squared(3));
+
+        // Function definition as variable
+        const trippled = function(b) {
+            return b * b * b;
+        }
+        console.log(trippled(3));
+
+        // Function definition as fat arrow
+        const divide = (a, b) => {
+            return a / b;
+        }
+        // Alternate Definiton - SHORT
+        // const divide = (a,b) => a / b;
+        console.log(divide(10, 2));
+
+        punch();
+
+        // Hoisting
+        function punch() {
+            console.log('punch');
+        }
+       </code>
+   </pre>
+    <script>
+        function saySomething(message = 'goodbye', whisper = false) {
+            if (whisper) {
+                console.log(`%c${message}`, 'font-size: 5px;')
+            } else {
+                console.log(message)
+            }
+        }
+
+        saySomething('hello', true);
+        saySomething('my name is max', true);
+        saySomething();
+
+        // Function definition
+        function squared(a) {
+            return a * a;
+        }
+        console.log(squared(3));
+
+        // Function definition as variable
+        const trippled = function(b) {
+            return b * b * b;
+        }
+        console.log(trippled(3));
+
+        // Function definition as fat arrow
+        const divide = (a, b) => {
+            return a / b;
+        }
+        // Alternate Definiton - SHORT
+        // const divide = (a,b) => a / b;
+        console.log(divide(10, 2));
+
+        punch();
+
+        // Hoisting
+        function punch() {
+            console.log('punch');
+        }
+    </script>
+</body>
+
+</html>

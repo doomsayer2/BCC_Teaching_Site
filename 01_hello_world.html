@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello World Example</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles/hello_world.css">
+
+    <!-- Syntax Highlighting -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</head>
+
+<body>
+    <div class="jumbotron text-center">
+        <h1>This is my site!</h1>
+
+        <button class="btn btn-primary" onclick="changeText()">
+            Change the Text
+        </button>
+    </div>
+
+    <hr />
+    <pre>
+        <code class="language-js">
+                const header = document.querySelector('h1');
+        
+                function changeText() {
+                    header.innerText = 'my new text!';
+                }
+        </code>
+    </pre>
+
+    <script>
+        const header = document.querySelector('h1');
+
+        function changeText() {
+            header.innerText = 'my new text!';
+        }
+    </script>
+</body>
+
+</html>

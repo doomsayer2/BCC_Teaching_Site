@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookmark</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
+    <link rel="stylesheet" href="../../styles/bookmark.css" />
+    <script src="https://kit.fontawesome.com/5751639fad.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="overlay"></div>
+
+    <div class="floater content">
+        <form class="bookmark-form">
+            <div class="floater-top">
+                <input type="text" class="form-control" placeholder="What do you want to bookmark?">
+            </div>
+            <div class="floater-bottom">
+                <button type="submit" class="btn btn-info btn-sm">Add</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="bookmarks-list content"></div>
+
+    <script>
+        /*
+         * ========================================================
+         * Show the initial flooater and dialog and add the animations
+        */
+        const body = document.body;
+        const input = document.querySelector('input[type=text');
+        const overlay = document.querySelector('.overlay');
+
+        function showFloater() {
+            body.classList.add('show-floater');
+        }
+
+        function closeFloater() {
+            if (body.classList.contains('show-floater')) {
+                body.classList.remove('show-floater');
+            }
+        }
+
+        input.addEventListener('focusin', showFloater);
+        overlay.addEventListener('focusout', closeFloater);
+        overlay.addEventListener('click', closeFloater);
+
+        /*
+         * ========================================================
+         * Add the functionality for bookmarking things
+        */
+        const bookmarksList = document.querySelector('.bookmarks-list');
+        const bookmarkForm = document.querySelector('.bookmark-form');
+        const bookmarkInput = bookmarkForm.querySelector('input[type=text]');
+        const bookmarks = JSON.parse(localStorage.getItem('bookmarks')) || [];
+
+        // Initially fill list with previous bookmarks
+        fillBookmarksList(bookmarks);
+
+        function createBookmark(e) {
+            e.preventDefault();
+
+            // Add a new bookmark to the bookmarks
+            const title = bookmarkInput.value;
+            const bookmark = {
+                title,
+            };
+            bookmarks.push(bookmark);
+
+            fillBookmarksList(bookmarks);
+            storeBookmarks(bookmarks);
+            // Clear values
+            bookmarkForm.reset();
+            
+            // Save that bookmark list to the local storage
+
+            // TEMPORARY VERSION JUST FOR SHOWCASE
+            // // Read out the information and create bookmark
+            // const title = bookmarkInput.value;
+            // const bookmark = document.createElement('a');
+            // bookmark.className = 'bookmark';
+            // bookmark.innerText = title;
+            // bookmark.href = '#';
+            // bookmark.target = '_blank';
+
+            // // Add the bookmark to the list
+            // bookmarksList.appendChild(bookmark);
+        }
+
+        // This function is used to fill the bookmarks list when we have new ones from the local storage
+        function fillBookmarksList(bookmarks = []) {
+            const bookmarksHtml = bookmarks.map((bookmark) => {
+                return `<a href="#" class="bookmark">${bookmark.title}</a>`;
+            }).join('');
+
+            // TRADITIONAL WAY
+            // let bookmarksHtml = '';
+            // for (let i = 0; i < bookmarks.length; i++) {
+            //     bookmarksHtml += `
+            //         <a href="#" class="bookmark">
+            //             ${bookmarks[i].title}
+            //         </a>
+            //     `;
+            // }
+
+            bookmarksList.innerHTML = bookmarksHtml;
+        }
+
+        // This function is used to actually store the bookmarks
+        function storeBookmarks(bookmarks = []) {
+            localStorage.setItem('bookmarks', JSON.stringify(bookmarks));
+        }
+
+        bookmarkForm.addEventListener('submit', createBookmark);
+    </script>
+</body>
+
+</html>

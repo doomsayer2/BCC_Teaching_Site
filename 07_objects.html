@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles/objects.css">
+
+    <!-- Syntax Highlighting -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</head>
+
+<body>
+    <h1>Objects</h1>
+    <pre>
+       <code class="language-js">
+        const hero = {
+            name: 'Bruce Wayne',
+            alias: 'Batman',
+            catchphrase: 'To the Batcave!',
+            speak: function() {
+                return 'Attention! ' + this.catchphrase;
+            },
+            attack: function(sound) {
+                return `(punches bad guy) ${sound}`;
+            }
+        };
+
+        // Access a property
+        console.log(hero.name); // Bruce Wayne
+        console.log(hero['name']); // Bruce Wayne
+
+        // Access a property with bracket notation and property as variable
+        const thingToLookFor = 'alias';
+        console.log(hero[thingToLookFor]);  // Batman
+
+        // Access a method (functions in a object)
+        console.log(hero.speak());  // Attention! To the Batcave!
+        console.log(hero.attack('POWWWWW'));    // (punches bad guy) POWWWWW
+        console.log(hero.speak);
+       </code>
+   </pre>
+    <script>
+        const hero = {
+            name: 'Bruce Wayne',
+            alias: 'Batman',
+            catchphrase: 'To the Batcave!',
+            speak: function() {
+                return 'Attention! ' + this.catchphrase;
+            },
+            attack: function(sound) {
+                return `(punches bad guy) ${sound}`;
+            }
+        };
+
+        // Access a property
+        console.log(hero.name); // Bruce Wayne
+        console.log(hero['name']); // Bruce Wayne
+
+        // Access a property with bracket notation and property as variable
+        const thingToLookFor = 'alias';
+        console.log(hero[thingToLookFor]);  // Batman
+
+        // Access a method (functions in a object)
+        console.log(hero.speak());  // Attention! To the Batcave!
+        console.log(hero.attack('POWWWWW'));    // (punches bad guy) POWWWWW
+        console.log(hero.speak);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operators</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles/operators.css">
+
+    <!-- Syntax Highlighting -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</head>
+
+<body>
+    <h1>Operators</h1>
+    <pre>
+       <code class="language-js">
+        let a = 10,
+            b = 4,
+            c = 15;
+        let d = '5'
+            e = 'my name'
+            f = 'is max';
+
+        // Addition
+        console.group('Addition');
+            console.log(a + b); // 14
+            console.log(a + c); // 25
+            console.log(e + ' ' + f);   // my name is max
+            console.log(a + d); // 105
+            console.log(e + ' is batman');  // my name is batman
+        console.groupEnd();
+
+        // Substraction
+        console.group('Substraction');
+            console.log(a - b); // 6
+            console.log(a - c); // -5
+            console.log(a - d); // 5
+        console.groupEnd();
+
+        // Multiplication
+        console.group('Multiplication');
+            console.log(a * 3); // 30
+            console.log(a * b); // 40
+            console.log(b * c); // 60
+        console.groupEnd();
+
+        // Division
+        console.group('Division');
+            console.log(a / 2); // 5
+            console.log(a / 3); // 3.3333333
+        console.groupEnd();
+
+        // Incrementing
+        console.group('Incrementing');
+            console.log(a + 1); // 11
+            console.log(a++);   // 10
+            console.log(a); // 11
+            console.log(++a); // 12
+            console.log(b += 2);    // 6
+        console.groupEnd();
+
+        // Decrementing
+        console.group('Decrementing')
+            console.log(c - 1); // 14
+            console.log(--c);   // 14
+            console.log(b -= 2);    // 4
+        console.groupEnd();
+        </code>
+   </pre>
+    <script>
+        let a = 10,
+            b = 4,
+            c = 15;
+        let d = '5'
+        e = 'my name'
+        f = 'is max';
+
+        // Addition
+        console.group('Addition');
+        console.log(a + b); // 14
+        console.log(a + c); // 25
+        console.log(e + ' ' + f);   // my name is max
+        console.log(a + d); // 105
+        console.log(e + ' is batman');  // my name is batman
+        console.groupEnd();
+
+        // Substraction
+        console.group('Substraction');
+        console.log(a - b); // 6
+        console.log(a - c); // -5
+        console.log(a - d); // 5
+        console.groupEnd();
+
+        // Multiplication
+        console.group('Multiplication');
+        console.log(a * 3); // 30
+        console.log(a * b); // 40
+        console.log(b * c); // 60
+        console.groupEnd();
+
+        // Division
+        console.group('Division');
+        console.log(a / 2); // 5
+        console.log(a / 3); // 3.3333333
+        console.groupEnd();
+
+        // Incrementing
+        console.group('Incrementing');
+        console.log(a + 1); // 11
+        console.log(a++);   // 10
+        console.log(a); // 11
+        console.log(++a); // 12
+        console.log(b += 2);    // 6
+        console.groupEnd();
+
+        // Decrementing
+        console.group('Decrementing')
+        console.log(c - 1); // 14
+        console.log(--c);   // 14
+        console.log(b -= 2);    // 4
+        console.groupEnd();
+    </script>
+</body>
+
+</html>

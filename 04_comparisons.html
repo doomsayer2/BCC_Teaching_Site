@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparisons</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles/comparisons.css">
+
+    <!-- Syntax Highlighting -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</head>
+
+<body>
+    <h1>Comparisons</h1>
+    <pre>
+       <code class="language-js">
+        const original = 'Susan';
+        const clone = 'SUSAN';
+
+        console.group('String Comparison');
+            console.log(original == 'Susan');   // true
+            console.log(original == clone); // false
+            console.log(original.toLowerCase() == clone.toLowerCase()); // true
+        console.groupEnd();
+
+        const num1 = 10;
+        const num2 = '10';
+
+        console.group('Number Comparison');
+            console.log(num1 == num2);  // true
+            console.log(num1 === num2)  // false
+            console.log(num1 != num2);  // false
+            console.log(num1 !== num2)  // true
+        console.groupEnd();
+
+        let what;   // undefined
+        let thing = null;
+
+        console.group('Boolean Comparison');
+            console.log(Boolean(original)); // true
+            console.log(Boolean(what)); // false
+            console.log(Boolean(thing)); // false
+            console.log(Boolean(num1)); // true
+            console.log(Boolean(num2)); // true
+            console.log(Boolean({})); // true
+            console.log(Boolean([])); // true
+        console.groupEnd();
+
+        const firstArr = [1, 2, 3];
+        const secondArr = [1, 2, 3];
+        const firstObj = { color: 'red' };
+        const secondObj = { color: 'red' };
+
+        console.group('Array & Object Comparison');
+            console.log(firstArr == secondArr); // false
+            console.log(firstObj == secondObj); // false
+        console.groupEnd();
+
+        console.group('&& (AND) || (OR) Comparsion');
+            console.log(Boolean('lorem') && Boolean('Ipsum'));  // true
+            console.log(Boolean('lorem') && Boolean(''));   // false
+            console.log(Boolean('lorem') || Boolean(''));   // true
+            console.log(Boolean('') || Boolean(''));   // false
+        console.groupEnd();
+        </code>
+   </pre>
+    <script>
+        const original = 'Susan';
+        const clone = 'SUSAN';
+
+        console.group('String Comparison');
+        console.log(original == 'Susan');   // true
+        console.log(original == clone); // false
+        console.log(original.toLowerCase() == clone.toLowerCase()); // true
+        console.groupEnd();
+
+        const num1 = 10;
+        const num2 = '10';
+
+        console.group('Number Comparison');
+        console.log(num1 == num2);  // true
+        console.log(num1 === num2)  // false
+        console.log(num1 != num2);  // false
+        console.log(num1 !== num2)  // true
+        console.groupEnd();
+
+        let what;   // undefined
+        let thing = null;
+
+        console.group('Boolean Comparison');
+        console.log(Boolean(original)); // true
+        console.log(Boolean(what)); // false
+        console.log(Boolean(thing)); // false
+        console.log(Boolean(num1)); // true
+        console.log(Boolean(num2)); // true
+        console.log(Boolean({})); // true
+        console.log(Boolean([])); // true
+        console.groupEnd();
+
+        const firstArr = [1, 2, 3];
+        const secondArr = [1, 2, 3];
+        const firstObj = { color: 'red' };
+        const secondObj = { color: 'red' };
+
+        console.group('Array & Object Comparison');
+        console.log(firstArr == secondArr); // false
+        console.log(firstObj == secondObj); // false
+        console.groupEnd();
+
+        console.group('&& (AND) || (OR) Comparsion');
+        console.log(Boolean('lorem') && Boolean('Ipsum'));  // true
+        console.log(Boolean('lorem') && Boolean(''));   // false
+        console.log(Boolean('lorem') || Boolean(''));   // true
+        console.log(Boolean('') || Boolean(''));   // false
+        console.groupEnd();
+    </script>
+</body>
+
+</html>

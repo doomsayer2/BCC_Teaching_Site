@@ -1,0 +1,148 @@
+:root {
+    --main-color: #85f5ea;
+    --highlicht-color: #dcc0ff;
+    --bg-color: #292929;
+    --bg-accent: #1E1E1E;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+/*
+    BASIC LAYOUT 
+*/
+.myContainer {
+    margin: 2% 0 0 5%;
+}
+
+.cardContainer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.header {
+    margin-bottom: 50px;
+}
+
+.specialFooter {
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+/*
+    SPECIALS
+*/
+.highlight {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 10%, var(--highlicht-color) 60%);
+}
+
+/*
+    CARDS 
+*/
+.specialCard {
+    flex: 1 1 calc(33% - 5px);
+    margin-top: -40px;
+}
+
+.specialCard .face {
+    width: 400px;
+    height: 200px;
+    transition: 0.5s;
+    border-radius: 5px;
+}
+
+.specialCard .face.face1 {
+    position: relative;
+    background: var(--bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transform: translateY(100px);
+}
+
+.specialCard:hover .face.face1 {
+    background: var(--main-color);
+    transform: translateY(0);
+}
+
+.specialCard .face.face1 .content {
+    opacity: 0.2;
+    transition: 0.5s;
+}
+
+.specialCard:hover .face.face1 .content {
+    opacity: 1;
+}
+
+.specialCard .face.face1 .content img {
+    max-width: 100px;
+}
+
+.specialCard .face.face1 .content h3 {
+    margin: 10px 0 0;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.specialCard .face.face2 {
+    position: relative;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    transform: translateY(-100px);
+}
+
+.specialCard:hover .face.face2 {
+    transform: translateY(0);
+}
+
+.specialCard .face.face2 .content p {
+    margin: 0;
+    padding: 0;
+}
+
+.specialCard .face.face2 .content a {
+    margin: 15px 0 0;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 900;
+    color: var(--bg-color);
+    padding: 5px;
+    border: 1px solid var(--bg-color);
+}
+
+.specialCard .face.face2 .content a:hover {
+    background: var(--bg-color);
+    color: #fff;
+}
+
+/*
+    NAV BAR 
+*/
+
+
+/*
+    TABLE
+*/
+tr {
+    line-height: 1.6;
+}
+
+.colorChange {
+    background-color: var(--bg-color) !important;
+    color: var(--main-color) !important;
+}
+
+tbody > tr > th {
+    background-color: white !important;
+}

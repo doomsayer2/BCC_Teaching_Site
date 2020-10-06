@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Price Calculator</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
+    <link rel="stylesheet" href="../../styles/price_calculator.css" />
+</head>
+
+<body>
+    <h1>Price Calculator</h1>
+    <div class="jumbotron">
+        <h2>How much is the fish?</h2>
+
+        <form>
+            <div class="form-group">
+                <label for="price">Price</label>
+                <input type="text" class="form-control" name="price" value="5">
+            </div>
+
+            <div class="form-group">
+                <label for="quantity">
+                    Quantity
+                    <span class="badge badge-primary quantity-label"></span>
+                </label>
+                <input type="range" class="form-control" name="quantity" value="1" min="1" max="100" step="1">
+            </div>
+        </form>
+
+        <div class="text-right text-giant"></div>
+    </div>
+
+    <script>
+        // 1. Grab everything we need from the DOM
+        const priceInput = document.querySelector('[name=price]');
+        const quantityInput = document.querySelector('[name=quantity]');
+        const total = document.querySelector('.text-giant');
+        const quantityLabel = document.querySelector('.quantity-label');
+
+        // 2. Create the functions that we will use
+        function calculateCost() {
+            const price = priceInput.value;
+            const quantity = quantityInput.value;
+            const cost = price * quantity;
+            total.innerText = '$' + cost.toFixed(2);
+        }
+
+        function updateQuantityLabel() {
+            const quantity = quantityInput.value;
+            quantityLabel.innerText = quantity;
+        }
+
+        // On first running the application
+        calculateCost();
+        updateQuantityLabel();
+
+        // 3. Add the event listeners
+        priceInput.addEventListener('input', calculateCost);
+        quantityInput.addEventListener('input', calculateCost);
+        quantityInput.addEventListener('input', updateQuantityLabel);
+    </script>
+</body>
+
+</html>

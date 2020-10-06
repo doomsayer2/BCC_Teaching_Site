@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Course Glossary</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../lib/css/bulma.min.css">
+    <link rel="stylesheet" href="../../style.css">
+
+    <script src="https://kit.fontawesome.com/e6208eca29.js" crossorigin="anonymous"></script>
+    <script src="../../lib/tablefilter.js"></script>
+
+    <!-- Syntax Highlighting -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</head>
+
+<body>
+    <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="https://bward2.github.io/pacman-js/" target="__blank">
+                <img src="../../img/BeanEater.svg" style="transform: scale(1.7); margin-left: 10px;">
+            </a>
+
+            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
+                data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item" href="../../index.html">
+                    Home
+                </a>
+
+                <a class="navbar-item is-active">
+                    Glossary
+                </a>
+
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link">
+                        Basic Projects
+                    </a>
+
+                    <div class="navbar-dropdown">
+                        <a class="navbar-item" href="../projects/01_dom_and_events.html" target="__blank">
+                            DOM & Events
+                        </a>
+                        <a class="navbar-item" href="../projects/02_price_calculator.html" target="__blank">
+                            Price Calculator
+                        </a>
+                        <a class="navbar-item" href="../projects/03_stopwatch.html" target="__Blank">
+                            Stopwatch
+                        </a>
+                        <a class="navbar-item" href="../projects/04_accordion.html" target="__Blank">
+                            Accordion
+                        </a>
+                        <!-- <hr class="navbar-divider">
+                        <a class="navbar-item">
+                            Report an issue
+                        </a> -->
+                    </div>
+                </div>
+
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link">
+                        Advanced Projects
+                    </a>
+
+                    <div class="navbar-dropdown">
+                        <a class="navbar-item" href="../projects/05_bookmark.html" target="__blank">
+                            Bookmark
+                        </a>
+                        <!-- <hr class="navbar-divider">
+                        <a class="navbar-item">
+                            Report an issue
+                        </a> -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="navbar-end">
+                <a href="https://ecampus.fhstp.ac.at/login/index.php" target="__blank" style="margin-top: 5px; margin-right: 10px;">
+                    <img src="../../img/fh_logo.svg" alt="FH St. Pölten Logo" width="50px">
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="myContainer">
+        <div class="header">
+            <span class="title is-3">JavaScript - Glossary</span>
+            <p style="margin-top: 10px;">This glossary should be an orientation for you if you find some terms difficult
+                or hard to understand. It
+                is growing and should grow but contains
+                most of the common terms for now that will be used not only in JavaScript but also in other programming
+                languages. There is no specific order. Howeover, you can filter each column and search for keywords.</p>
+
+            <hr />
+        </div>
+
+        <div style="width: 90%;">
+            <table class="table is-fullwidth" id="glossary">
+                <thead>
+                    <tr>
+                        <th class="colorChange">Term</th>
+                        <th class="colorChange">Explanation</th>
+                        <th class="colorChange">Example</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th><b>Declaration</b></th>
+                        <td>Declaring a variable is the process of creating a variable. When a variable is declared
+                            it doesn't have to be initialized immediately (default: undefined).
+                        </td>
+                        <td>
+                            <pre>
+                            <code class="language-js">
+let name; // It's value is undefined
+                            </code>
+                            </pre>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th><b>Initialization</b></th>
+                        <td>Initializing a variable is the process of assigning an initial value to a variable.</td>
+                        <td>
+                            <pre>
+                            <code class="language-js">
+let name = 'John';
+                            </code>
+                        </pre>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th><b>Expression</b></th>
+                        <td>An expression is any valid unit of code that resolves to a value. This includes function
+                            calls that return a value or expressions that consist
+                            of multiple <i>subexpressions</i>.
+                        </td>
+                        <td>
+                            <pre>
+                            <code class="language-js">
+const x = 5;               // Resolves to 5
+const y = getAnswer()      // Resolves to a value
+const z = (156 + 23) / 2   // Resolves to 89,5 
+                            </code>
+                        </pre>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th><b>Statement</b></th>
+                        <td>A statement is (rouhgly) an instruction or an action. It performs actions or controls
+                            actions, but doesn't resolve to a value.</td>
+                        <td>
+                            <pre>
+                            <code class="language-js">
+if (...) {
+
+}
+
+while (...) {
+
+}
+                            </code>
+                        </pre>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th><b>Parameters</b></th>
+                        <td>Parameters are the variables in a function definition. They represent the values passed to
+                            the function inside the function.</td>
+                        <td>
+                            <pre>
+                            <code class="language-js">
+function sum(a, b) {
+    return a + b;
+}
+                            </code>
+                        </pre>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Arguments</th>
+                        <td>Arguments are the values we pass to a function when it is invoked.</td>
+                        <td>
+                            <pre>
+                            <code class="language-js">
+sum(4, 6);
+                            </code>
+                        </pre>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Instance</th>
+                        <td>An instance is in JavaScript an object that is created by using a constructor function.</td>
+                        <td>
+                            <pre>
+                            <code class="language-js">
+let john = new Employee();
+                            </code>
+                        </pre>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Properties</th>
+                        <td>Properties are the key: value pairs that are associated with a JavaScript object.</td>
+                        <td>
+                            <pre>
+                            <code class="language-js">
+const animal = {
+    legs: 4,
+    species: 'lizard',
+    tail: true
+};  // Animal has 3 properties
+                            </code>
+                        </pre>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Method</th>
+                        <td>A method is a property which contains a function definition.</td>
+                        <td>
+                            <pre>
+                            <code class="language-js">
+const employee =  {
+    name: 'John',
+    surname: 'Doe',
+    completeName: function() {
+        return name + ' ' + surname;
+    }
+};
+
+eployee.completeName();
+                            </code>
+                        </pre>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Null</th>
+                        <td>Null is a primitive data type. It represents the intentional absence of value.</td>
+                        <td>
+                            <pre>
+                            <code class="language-js">
+let x = null;
+                            </code>
+                        </pre>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Arithmetic Operators</th>
+                        <td>JavaScript supports the following arithmetic operators:
+                            <ul>
+                                <li><code>+</code> for addition</li>
+                                <li><code>-</code> for substraction</li>
+                                <li><code>*</code> for multiplication</li>
+                                <li><code>/</code> for division</li>
+                                <li><code>%</code> for modulo (calculate rest)</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <pre>
+                            <code class="language-js">
+// Addition
+10 + 5
+// Substraction
+10 - 5
+// Mulitplication
+10 * 5
+// Division
+10 / 5
+// Modulo
+10 % 5
+                            </code>
+                        </pre>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Assignment Operators</th>
+                        <td>An assignment operator assigns a value to its left operand based on the value of its right
+                            operand.
+                            <ul>
+                                <li><code>+=</code> addition assignment</li>
+                                <li><code>-=</code> substraction assignment</li>
+                                <li><code>*=</code> multiplication assignment</li>
+                                <li><code>/=</code> division assignment</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <pre>
+                            <code class="language-js">
+let number = 100;
+
+// Both statements will add 10
+number = number + 10;
+number += 10;
+
+console.log(number);  // 120
+                            </code>
+                        </pre>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>String Interpolation</th>
+                        <td>String interpolation is the process of evaluating string literals containing one or more
+                            placeholders by using template literals.
+                        </td>
+                        <td>
+                            <pre>
+                            <code class="language-js">
+let age = 20;
+
+// String concatination
+'Tommy is ' + age + ' years old.';
+
+// String interpolation
+`Tommy is ${age} years old.`;
+                            </code>
+                        </pre>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Variables</th>
+                        <td>Variables are used to store data. A variable contains data that can be used in the program
+                            elsewhere. Using variables also ensures code re-usability.
+                        </td>
+                        <td>
+                            <pre>
+                            <code class="language-js">
+const currency = '$';
+const income = 90000;
+
+console.log(currency + income ' is really a lot');
+                            </code>
+                        </pre>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Undefined</th>
+                        <td><code>undefined</code> is a prmitive JavasScript value that represents the lack of a defined
+                            value. Variables that are declared but not initialized will have the value
+                            <code>undefined</code>.
+                        </td>
+                        <td>
+                            <pre>
+                            <code class="language-js">
+let a;
+
+console.log(a);     // undefined
+                            </code>
+                        </pre>
+                        </td>
+                    </tr>
+                    </tr>
+                    <tr>
+                        <th><code>let</code> Keyword</th>
+                        <td><code>let</code> creates a local variable in JavaScript which can be re-assigned. It will
+                            contain a value of <code>undefined</code> if nothing is assigned to it.
+                        </td>
+                        <td>
+                            <pre>
+                        <code class="language-js">
+let count;  // undefined
+count = 10; // 10
+                        </code>
+                    </pre>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th><code>const</code> Keyword</th>
+                        <td>A constant variable can be declared using the <code>const</code> keyword. It as to be
+                            initialized. Any attempt of re-assigning a const variable will result in a runtime error.
+                        </td>
+                        <td>
+                            <pre>
+                        <code class="language-js">
+const numLegs = 2;
+numLegs = 4;        // ERROR
+                        </code>
+                    </pre>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Scope</th>
+                        <td>Scope is a concept that refers to where values and functions can be accessed. Scopes
+                            include:
+                            <div class="content">
+                                <ul>
+                                    <li><i>Global scope</i> - variables/functions declared here can be used anywhere in
+                                        the entire program.</li>
+                                    <li><i>File/Module scope</i> - value/funciton can only be accessed from within the
+                                        file.</li>
+                                    <li><i>Function scope</i> - only visible within the function.</li>
+                                    <li><i>Code block scope</i> - only visisble within a <code>{...}</code> codeblock.
+                                    </li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td>
+                            <pre>
+                        <code class="language-js">
+function sayName() {
+    const firstName = 'John';
+    // Here we can use firstName
+}
+
+// Here we can't use firstName
+                        </code>
+                    </pre>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Block Scoped Variables</th>
+                        <td><code>const</code> and <code>let</code> are <i>block scoped</i> variables, which makes them
+                            only accessible in their block or nested blocks.</td>
+                        <td>
+                            <pre>
+                        <code class="language-js">
+const isRegistered = true;
+
+if (isRegistered) {
+    const statusMsg = 'This is a registered user.';
+}
+
+console.log(statusMsg); // ERROR
+                        </code>
+                    </pre>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Global Variables</th>
+                        <td>Variables that are declared outside of blocks or functions can exist in the <i>global
+                                scope</i> which makes them accessible throughout a program.
+                            <b>Best practice is to reduce global variables to a minimum.</b></td>
+                        <td>
+                            <pre>
+                        <code class="language-js">
+const color = 'green';  // Global declaration
+
+function printColor() {
+    console.log(color);
+}
+
+printColor();
+                        </code>
+                    </pre>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Ternary Operator</th>
+                        <td>The ternary operator allows for a compact syntax in case of binary decisions. It accepts a
+                            condition followed by a <code>?</code> operator, and
+                            then two expressions seperated by a <code>:</code>. If the condition evalutes to truthy, the
+                            first expression is executed, otherwise the second.</td>
+                        <td>
+                            <pre>
+                        <code class="language-js">
+let price = 20;
+let day = 'Friday';
+
+day === 'Friday' ? price -= 1.5 : price += 0.5;
+                        </code>
+                    </pre>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Arrow Functions</th>
+                        <td>The syntax for an arrow function doesn't require the <code>function</code> keyword and uses
+                            a fat arrow <code>=></code> to separate the parameters from the body.
+                            Keep in mind that arrow functions usually don't have their own <code>this</code>
+                            scope.<br />
+                            There are several variations of arrow functions:
+                            <div class="content">
+                                <ul>
+                                    <li>Arrow functions with a single <b>parameter</b> do not require the
+                                        <code>()</code>.</li>
+                                    <li>Arrow functions with a single <b>expression</b> can use the concise function
+                                        body, which returns the result without using the <code>return</code> keyword.
+                                    </li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td>
+                            <pre>
+                        <code class="language-js">
+// Two arguments
+const sum = (x, y) => {
+    return x + y;
+}
+
+// No arguments
+const printName = () => {
+    console.log('John');
+}
+
+// Single argument 
+const checkTemperature = temp => {
+    return temp > 0 ? 'Above the freezing point' : ' Below the freezing point';
+}
+
+// Concise version
+const multiply = (a,b) => a * b;
+                        </code>
+                    </pre>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Mutable</th>
+                        <td>JavaScript arrays are mutable, which lets us change the values they contain. Even if we
+                            declare the array using the <code>const</code>
+                            keyword, the <b>contents</b> can be manipulated by reassigning internal values or by using
+                            <code>.push()</code> and <code>.pop()</code> methods.</td>
+                        <td>
+                            <pre>
+                        <code class="language-js">
+const names = ['John', 'Jane'];
+
+names.push('Bob');
+                        </code>
+                    </pre>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Invoking, calling or applying</th>
+                        <td>When we are <b>invoking</b>, <b>calling</b> or <b>applying</b> a funciton we essential
+                            execute it. A function is a piece of code or program that is wrapped in a value. A function
+                            can be called by putting parentheses after the functions name.</td>
+                        <td>
+                            <pre>
+                        <code class="language-js">
+prompt('Enter your name please:');  // This will execute a built in function
+                        </code>
+                    </pre>
+                        </td>
+                    </tr>                                                                       
+                </tbody>
+            </table>
+        </div>
+        <div class="specialFooter">
+            <hr />
+            <small>Copyright... <a href="https://icmt.fhstp.ac.at/team/florian-grassinger" target="__blank">ME</a></small>
+        </div>
+    </div>
+
+    <script>
+        const filtersConfig = {
+            // instruct TableFilter location to import ressources from
+            base_path: '../../lib/',
+            btn_reset: true,
+        };
+
+        const tf = new TableFilter('glossary', filtersConfig);
+        tf.init();
+    </script>
+</body>
+
+</html>

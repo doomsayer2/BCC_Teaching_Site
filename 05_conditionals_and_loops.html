@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditionals & Loops</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles/conditionals_and_loops.css">
+
+    <!-- Syntax Highlighting -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</head>
+
+<body>
+    <h1>Conditionals & Loops</h1>
+    <div class="dogs-list"></div>
+    <hr />
+    <div class="cats-list"></div>
+    <hr />
+    <div class="birds-list"></div>
+    <hr />
+    <div class="fish-list"></div>
+    <pre>
+       <code class="language-js">
+        const name = prompt('What is your name?');
+        const username = 'maxpower';
+
+        // If
+        if (name === 'max' || name === 'peter') {
+            console.log('Hello');
+        } else if (name === 'holly') {
+            console.log('this is holly');
+        } else {
+            console.log('not max');
+        }
+
+        // For
+        const dogsList = document.querySelector('.dogs-list');
+        const dogs = [
+            { name: 'bruce', type: 'chihuahua' },
+            { name: 'chance', type: 'bernese' },
+        ];
+
+        for (let i = 0; i < dogs.length; i++) {
+            // Grab a specific dog each time we go through loop
+            const dog = dogs[i];
+            // Create a new div for each dog
+            const dogData = document.createElement('div');
+            // Add the name and type of our dog to the div
+            dogData.innerText = `${dog.name} is a ${dog.type}`;
+            // Append the div to the one we have on the DOM
+            dogsList.appendChild(dogData);
+        }
+
+        // While
+        const catsList = document.querySelector('.cats-list');
+        const cats = [
+            { name: 'meow', type: 'long hair' },
+            { name: 'purr', type: 'short hair' },
+        ];
+
+        let i = 0;
+        while (i < cats.length) {
+            // Grab a specific cat each time we go through loop
+            const cat = cats[i];
+            // Create a new div for each cat
+            const catData = document.createElement('div');
+            // Add the name and type of our cat to the div
+            catData.innerText = `${cat.name} is a ${cat.type}`;
+            // Append the div to the one we have on the DOM
+            catsList.appendChild(catData);
+            i++;
+        }
+
+        // Do While
+        const birdsList = document.querySelector('.birds-list');
+        const birds = [
+            { name: 'pepe', type: 'ara' },
+            { name: 'nero', type: 'crow' },
+        ];
+
+        let j = 0;
+        do {
+            // Grab a specific bird each time we go through loop
+            const bird = birds[j];
+            // Create a new div for each bird
+            const birdData = document.createElement('div');
+            // Add the name and type of our bird to the div
+            birdData.innerText = `${bird.name} is a ${bird.type}`;
+            // Append the div to the one we have on the DOM
+            birdsList.appendChild(birdData);
+            j++;
+        } while (j < birds.length)
+
+        // For Of
+        let fishList = document.querySelector('.fish-list');
+        const fishes = [
+            { name: 'nemo', type: 'clownfish' },
+            { name: 'dori', type: 'some blue fish I dont know' },
+        ];
+
+        for (let fish of fishes) {
+            // Create a new div for each fish
+            const fishData = document.createElement('div');
+            // Add the name and type of our fish to the div
+            fishData.innerText = `${fish.name} is a ${fish.type}`;
+            // Append the div to the one we have on the DOM
+            fishList.appendChild(fishData);
+        }
+       </code>
+   </pre>
+    <script>
+        const name = prompt('What is your name?');
+        const username = 'maxpower';
+
+        // If
+        if (name === 'max' || name === 'peter') {
+            console.log('Hello');
+        } else if (name === 'holly') {
+            console.log('this is holly');
+        } else {
+            console.log('not max');
+        }
+
+        // For
+        const dogsList = document.querySelector('.dogs-list');
+        const dogs = [
+            { name: 'bruce', type: 'chihuahua' },
+            { name: 'chance', type: 'bernese' },
+        ];
+
+        for (let i = 0; i < dogs.length; i++) {
+            // Grab a specific dog each time we go through loop
+            const dog = dogs[i];
+            // Create a new div for each dog
+            const dogData = document.createElement('div');
+            // Add the name and type of our dog to the div
+            dogData.innerText = `${dog.name} is a ${dog.type}`;
+            // Append the div to the one we have on the DOM
+            dogsList.appendChild(dogData);
+        }
+
+        // While
+        const catsList = document.querySelector('.cats-list');
+        const cats = [
+            { name: 'meow', type: 'long hair' },
+            { name: 'purr', type: 'short hair' },
+        ];
+
+        let i = 0;
+        while (i < cats.length) {
+            // Grab a specific cat each time we go through loop
+            const cat = cats[i];
+            // Create a new div for each cat
+            const catData = document.createElement('div');
+            // Add the name and type of our cat to the div
+            catData.innerText = `${cat.name} is a ${cat.type}`;
+            // Append the div to the one we have on the DOM
+            catsList.appendChild(catData);
+            i++;
+        }
+
+        // Do While
+        const birdsList = document.querySelector('.birds-list');
+        const birds = [
+            { name: 'pepe', type: 'ara' },
+            { name: 'nero', type: 'crow' },
+        ];
+
+        let j = 0;
+        do {
+            // Grab a specific bird each time we go through loop
+            const bird = birds[j];
+            // Create a new div for each bird
+            const birdData = document.createElement('div');
+            // Add the name and type of our bird to the div
+            birdData.innerText = `${bird.name} is a ${bird.type}`;
+            // Append the div to the one we have on the DOM
+            birdsList.appendChild(birdData);
+            j++;
+        } while (j < birds.length)
+
+        // For Of
+        let fishList = document.querySelector('.fish-list');
+        const fishes = [
+            { name: 'nemo', type: 'clownfish' },
+            { name: 'dori', type: 'some blue fish I dont know' },
+        ];
+
+        for (let fish of fishes) {
+            // Create a new div for each fish
+            const fishData = document.createElement('div');
+            // Add the name and type of our fish to the div
+            fishData.innerText = `${fish.name} is a ${fish.type}`;
+            // Append the div to the one we have on the DOM
+            fishList.appendChild(fishData);
+        }
+    </script>
+</body>
+
+</html>

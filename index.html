@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Course Overview</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./lib/css/bulma.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://kit.fontawesome.com/e6208eca29.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="https://bward2.github.io/pacman-js/" target="__blank">
+                <img src="./img/BeanEater.svg" style="transform: scale(1.7); margin-left: 10px;">
+            </a>
+
+            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
+                data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item is-active">
+                    Home
+                </a>
+
+                <a class="navbar-item" href="./components/explanations/glossary.html">
+                    Glossary
+                </a>
+
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link">
+                        Basic Projects
+                    </a>
+
+                    <div class="navbar-dropdown">
+                        <a class="navbar-item" href="./components/projects/01_dom_and_events.html" target="__blank">
+                            DOM & Events
+                        </a>
+                        <a class="navbar-item" href="./components/projects/02_price_calculator.html" target="__blank">
+                            Price Calculator
+                        </a>
+                        <a class="navbar-item" href="./components/projects/03_stopwatch.html" target="__Blank">
+                            Stopwatch
+                        </a>
+                        <a class="navbar-item" href="./components/projects/04_accordion.html" target="__Blank">
+                            Accordion
+                        </a>
+                        <!-- <hr class="navbar-divider">
+                        <a class="navbar-item">
+                            Report an issue
+                        </a> -->
+                    </div>
+                </div>
+
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link">
+                        Advanced Projects
+                    </a>
+
+                    <div class="navbar-dropdown">
+                        <a class="navbar-item" href="./components/projects/05_bookmark.html" target="__blank">
+                            Bookmark
+                        </a>
+                        <!-- <hr class="navbar-divider">
+                        <a class="navbar-item">
+                            Report an issue
+                        </a> -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="navbar-end">
+                <a href="https://ecampus.fhstp.ac.at/login/index.php" target="__blank" style="margin-top: 5px; margin-right: 10px;">
+                    <img src="./img/fh_logo.svg" alt="FH St. Pölten Logo" width="50px">
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="myContainer">
+        <div class="header">
+            <span class="title is-2">BCC - Lessons</span>
+            <div class="columns" style="margin-top: 10px;">
+                <div class="column">
+                    <p style="text-align: justify;">On this page you can find some examples for the more <b>practical</b> part of the course. The complexity is increasing with each example.
+                        Although, only one concept is always touched by each example and explained. Open the page and also the console in order to see the results of the displayed code.
+                    </p>
+                    <p style="text-align: justify; margin-top: 8px;">
+                        The <b>explanation</b> for each example will be given during the course as we are working through them. Each example is standalone, which means that it is
+                        possible to copy the source code and paste it to a new file on the local machine in order to make the example work. Therefore no navigation is included.
+                    </p>
+                </div>
+                <div class="column is-one-quarter" style="margin-right: 90px;">
+                    <div class="box">
+                        <span class="highlight">Remember! Open the console!</span> <br />
+                        <span>For <i class="fab fa-windows"></i> press <strong>CTRL + SHIFT + I (J)</strong></span> <br />
+                        <span>For <i class="fab fa-apple"></i> press <strong>CMD + Option + I (J)</strong></span> <br />
+                        <span>For <i class="fab fa-linux"></i> press <strong>CTRL + SHIFT + I (J)</strong></span> <br />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cardContainer">
+            <div class="specialCard">
+                <div class="face face1">
+                    <div class="content">
+                        <img src="./img/LessonA.png" height="110px">
+                        <h3>Lesson 1</h3>
+                    </div>
+                </div>
+                <div class="face face2">
+                    <div class="content">
+                        <p><span class="highlight">Hello World</span> - This is the first example along the road to
+                            learn JavaScript. We will deal with the basic concepts and a quick tryout before we dive
+                            deeper into the language.</p>
+                        <a href="./01_hello_world.html" target="_blank"><i class="fas fa-hand-point-right"></i>
+                            Example</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="specialCard">
+                <div class="face face1">
+                    <div class="content">
+                        <img src="./img/LessonB.png">
+                        <h3>Lesson 2</h3>
+                    </div>
+                </div>
+                <div class="face face2">
+                    <div class="content">
+                        <p><span class="highlight">Types & Variables</span> - Will introduce you to foundation of each
+                            programming language, the variables and data types. See the basic and advanced types and
+                            also the variable declartion.</p>
+                        <a href="./02_types_and_variables.html" target="_blank"><i class="fas fa-hand-point-right"></i>
+                            Example</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="specialCard">
+                <div class="face face1">
+                    <div class="content">
+                        <img src="./img/LessonC.png">
+                        <h3>Lesson 3</h3>
+                    </div>
+                </div>
+                <div class="face face2">
+                    <div class="content">
+                        <p><span class="highlight">Operators</span> - Are one of the most important parts for
+                            understanding not only the language but enhance the possiblities and functionality with it.
+                        </p>
+                        <a href="./03_operators.html" target="_blank"><i class="fas fa-hand-point-right"></i>
+                            Example</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="specialCard">
+                <div class="face face1">
+                    <div class="content">
+                        <img src="./img/LessonD.png">
+                        <h3>Lesson 4</h3>
+                    </div>
+                </div>
+                <div class="face face2">
+                    <div class="content">
+                        <p><span class="highlight">Comparisons</span> - Help us to evaluate some expressions and
+                            statements. We can also enhance the programs functionality even further by using them.</p>
+                        <a href="./04_comparisons.html" target="_blank"><i class="fas fa-hand-point-right"></i>
+                            Example</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="specialCard">
+                <div class="face face1">
+                    <div class="content">
+                        <img src="./img/LessonE.png">
+                        <h3>Lesson 5</h3>
+                    </div>
+                </div>
+                <div class="face face2">
+                    <div class="content">
+                        <p><span class="highlight">Conditionals & Loops</span> - A concept no programming language can
+                            work without. A lot of our functionality is derived from their power.</p>
+                        <a href="./05_conditionals_and_loops.html" target="_blank"><i
+                                class="fas fa-hand-point-right"></i> Example</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="specialCard">
+                <div class="face face1">
+                    <div class="content">
+                        <img src="./img/LessonF.png">
+                        <h3>Lesson 6</h3>
+                    </div>
+                </div>
+                <div class="face face2">
+                    <div class="content">
+                        <p><span class="highlight">Functions</span> - A concept no programming language can work
+                            without. A lot of our functionality is derived from their power.</p>
+                        <a href="./06_functions.html" target="_blank"><i class="fas fa-hand-point-right"></i>
+                            Example</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="specialCard">
+                <div class="face face1">
+                    <div class="content">
+                        <img src="./img/LessonG.png">
+                        <h3>Lesson 7</h3>
+                    </div>
+                </div>
+                <div class="face face2">
+                    <div class="content">
+                        <p><span class="highlight">Objects</span> - JavaScript considers everything as an object
+                            basically. An essential lesson for every JavaScript developer.</p>
+                        <a href="./07_objects.html" target="_blank"><i class="fas fa-hand-point-right"></i> Example</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="specialCard">
+                <div class="face face1">
+                    <div class="content">
+                        <img src="./img/LessonH.png">
+                        <h3>Lesson 8</h3>
+                    </div>
+                </div>
+                <div class="face face2">
+                    <div class="content">
+                        <p><span class="highlight">Built-In Objects</span> - As JavaScript considers everything an
+                            object there are of course some really important built-in objects. We will explore the most
+                            important ones here.</p>
+                        <a href="./08_built-in_objects.html" target="_blank"><i class="fas fa-hand-point-right"></i>
+                            Example</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="specialCard" style="opacity: 0;">
+                <div class="face face1">
+                    <div class="content">
+                        <img src="./img/LessonI.png">
+                        <h3>Placeholder ;)</h3>
+                    </div>
+                </div>
+                <div class="face face2">
+                    <div class="content">
+                        <p><span class="highlight">Just a Placeholder ;)</span> - Nothing to see here yet.</p>
+                        <a href="https://www.google.at" target="_blank"><i class="fas fa-hand-point-right"></i>
+                            Example</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="specialFooter">
+            <hr />
+            <small>Copyright... <a href="https://icmt.fhstp.ac.at/team/florian-grassinger" target="__blank">ME</a></small>
+        </div>
+
+        <!-- For the report issue button -->
+        <script src="./lib/portable-github-issues-form.js"></script>
+        <link rel="stylesheet" href="./lib/css/github-form.css">
+        <script>
+            let githubForm =  new GithubIssueForm({ 'token': '507e7ded02e6024040c29c2aad463a0315e34395 ', 'useragent': 'BCC_Teaching_Site', 'repository': 'doomsayer2/BCC_Teaching_Site', 'milestone': null });
+            githubForm.inject();
+        </script>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DOM & Events</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
+  <link rel="stylesheet" href="../../styles/dom_and_events.css" />
+</head>
+
+<body>
+  <h1>DOM and Events</h1>
+  <!-- OPTION 1: Attach the event listener to the html element -->
+  <div class="jumbotron text-center">
+    <h3>OPTION 1: Attach the event listener to the html element</h3>
+    <button class="btn btn-primary" onclick="changeColor()">Change Background</button>
+  </div>
+
+  <!-- OPTION 2: Use events directly on the element in js -->
+  <div class="jumbotron text-center">
+    <h3>OPTION 2: Use events directly on the element in js</h3>
+    <button class="btn btn-primary teaBtn">Change Background</button>
+    <button class="btn btn-primary teaBtn">Change Background</button>
+    <button class="btn btn-primary teaBtn">Change Background</button>
+  </div>
+
+  <!-- OPTION 3: Using the addEventListeners function -->
+  <div class="jumbotron text-center">
+    <h3>OPTION 3: Using the addEventListeners function</h3>
+    <button class="btn btn-primary cookieBtn">Change Background</button>
+  </div>
+
+  <script>
+    // 1. Grab elements from the DOM
+    // 2. Attach event listeners to them
+
+    // Option 1
+    function changeColor() {
+      const body = document.querySelector('body');
+      body.style.backgroundColor = 'cornflowerblue';
+    }
+
+    // Option 2
+    // -) If there is one Button
+    // const btn = document.querySelector('.teaBtn');
+    // btn.onclick = function () {
+    //   document.body.style.backgroundColor = 'aquamarine';
+    // }
+
+    // -) If there are multiple buttons
+    function changeColor2() {
+      document.body.style.backgroundColor = 'aquamarine';
+    }
+    const btns = document.querySelectorAll('.teaBtn');  // Node list
+    btns.forEach(function (button) {
+      button.onclick = changeColor2;  // Only pass the reference to the function not invoke it by using ()
+    });
+
+    // Option 3
+    const btn2 = document.querySelector('.cookieBtn');
+
+    function notListening() {
+      document.body.style.backgroundColor = 'springgreen';
+    }
+
+    // We are listening for the event click on that button and don't have to change the button direclty
+    btn2.addEventListener('click', notListening);
+    // Easier and cleaner to add more listeners
+    btn2.addEventListener('mouseenter', changeColor);
+
+    // Revert the changes when leaving the buttons
+    const allBtns = document.querySelectorAll('button');
+    allBtns.forEach(btn => btn.addEventListener('mouseleave', () => {
+      document.body.style.backgroundColor = 'white';
+    }));
+  </script>
+</body>
+
+</html>
