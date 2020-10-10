@@ -78,7 +78,8 @@ body.show-floater .overlay {
 }
 
 .bookmark {
-  display: block;
+  display: flex;
+  position: relative;
   background: #FFF;
   color: #999;
   padding: 20px;
@@ -101,4 +102,34 @@ body.show-floater .overlay {
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   border-bottom: 0;
+}
+
+.bookmark .img {
+  background-color: #DDD;
+  border-radius: 3px;
+  background-image: url('https://picsum.photos/200');
+  background-size: cover;
+  background-position: top center;
+  width: 120px;
+  height: 60px;
+  margin-right: 20px;
+}
+
+.bookmark .title {
+  display: flex;
+  align-items: center;
+}
+
+.bookmark .removeIcon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #EEE;
+  font-size: 12px;
+  transition: 0.3s ease color;
+  cursor: pointer;
+}
+
+.bookmark:hover .removeIcon {
+  color: #AAA;
 }
