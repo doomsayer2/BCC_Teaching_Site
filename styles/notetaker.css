@@ -1,0 +1,31 @@
+body {
+    padding: 30px;
+}
+
+p a {
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    color: #222531;
+    transition: color 0.3s ease;
+}
+
+p a::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    left: 0;
+    bottom: 0.125em;
+    height: 1px;
+    background: linear-gradient(90deg, #ff7800 0%, #ff0000 50%, #ff00fe 100%);
+    transition: bottom 0.3s ease;
+}
+
+p a:hover {
+    color: #222531;
+}
+
+p a:hover::after {
+    bottom: 0;
+}
