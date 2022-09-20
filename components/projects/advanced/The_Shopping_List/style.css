@@ -1,0 +1,65 @@
+h2 {
+    margin: 20px 0 !important;
+    font-family: sans-serif;
+}
+
+#myInput {
+    border-radius: 0 !important;
+    border-right: 0 !important;
+}
+
+.button {
+    border-radius: 0 !important;
+    border-left: 0 !important;
+    background: lightgray !important;
+}
+
+.button:hover {
+    background: gray !important;
+    color: white !important;
+}
+
+.inputDiv {
+    display: flex;
+}
+
+ul {
+    font-family: 'Gloria Hallelujah', cursive;
+}
+
+ul div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: thin solid lightgray;
+    margin: 0.5em;
+}
+
+ul div li {
+    list-style: none;
+    padding: 10px;
+}
+
+ul div:hover {
+    background: lightgray;
+    cursor: pointer;
+}
+
+ul div:hover li {
+    text-decoration: line-through;
+}
+
+span {
+    cursor: pointer;
+    padding-right: 5px;
+}
+
+.checked {
+    text-decoration: line-through;
+}
+
+.checked::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+}
